@@ -16,9 +16,8 @@ async function fetchHandler() {
   try {
     const resp = await axios.get(refs.url);
     // const data = await resp.json();
-    return resp.data.file;
-    console.log(resp);
-    refs.img.src = resp.data.file;
+    const refsImgSrc = refs.img.src = resp.data.file;
+    return refsImgSrc;
   } catch (err) {
     console.log(err);
   }
